@@ -25,12 +25,12 @@ model User {
   id      Int      @id @default(autoincrement())
   name    String
   email   String   @unique
-  role    Role?    @default(USER)
-  posts   post[]
+  role    Role     @default(USER)
+  posts   Post[]
   profile Profile?
 }
 
-model post {
+model Post {
   id         Int      @id @default(autoincrement())
   title      String
   content    String?
